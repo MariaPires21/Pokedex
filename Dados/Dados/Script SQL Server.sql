@@ -1,24 +1,24 @@
 CREATE TABLE Tipo (
-	Id	    INT NOT NULL IDENTITY,
+    Id	    INT NOT NULL IDENTITY,
     Nome    VARCHAR(30) NOT NULL,
     Cor     VARCHAR(25),
     PRIMARY KEY (Id)
 );
 
 CREATE TABLE Genero (
-	Id	    INT NOT NULL IDENTITY,
+	  Id	    INT NOT NULL IDENTITY,
     Nome    VARCHAR(30) NOT NULL,
     PRIMARY KEY (Id)
 );
 
 CREATE TABLE Regiao (
-	Id	    INT NOT NULL IDENTITY,
+	  Id	    INT NOT NULL IDENTITY,
     Nome    VARCHAR(30) NOT NULL,
     PRIMARY KEY (Id)
 );
 
 CREATE TABLE Pokemon (
- 	Numero 		  INT NOT NULL,
+ 	  Numero 		  INT NOT NULL,
     RegiaoId      INT NOT NULL,
     GeneroId      INT NOT NULL,
     Nome 		  VARCHAR(30) NOT NULL,
@@ -38,7 +38,7 @@ ALTER TABLE Pokemon ADD CONSTRAINT FK_Pokemon_Genero
 
 
 CREATE TABLE PokemonTipo (
-	PokemonNumero	INT NOT NULL,
+	  PokemonNumero	INT NOT NULL,
     TipoId			INT NOT NULL,
     PRIMARY KEY(PokemonNumero, TipoId)
 );
